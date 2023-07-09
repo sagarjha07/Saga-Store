@@ -28,9 +28,10 @@ function CategoryTabs() {
         },
         swipeEnabled: false,
       }}>
-      {categoryList.map(category => {
+      {categoryList.map((category, index) => {
         return (
           <Tab.Screen
+            key={index}
             name={category}
             children={() => <CategoryComponent categoryName={category} />}
           />

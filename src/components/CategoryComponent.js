@@ -20,11 +20,10 @@ const CategoryComponent = ({categoryName}) => {
         paddingTop: 80,
         paddingBottom: 20,
       }}>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Card height={270} width={220} />
+      <Card height={270} width={220} />
+      <Card height={270} width={220} />
+      <Card height={270} width={220} />
     </ScrollView>
   );
 };

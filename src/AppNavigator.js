@@ -5,6 +5,8 @@ import Splash from './components/Splash';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Home from './components/Home';
+import BottomTab from './components/BottomTab';
+import SearchPage from './components/SearchPage';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -29,7 +31,12 @@ const AppNavigator = () => {
         <Stack.Screen
           options={{headerShown: false}}
           name="home"
-          component={Home}
+          component={BottomTab}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="search"
+          component={SearchPage}
         />
       </Stack.Navigator>
     </NavigationContainer>

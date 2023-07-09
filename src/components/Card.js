@@ -1,19 +1,18 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
 
-const Card = () => {
+const Card = ({height, width}) => {
   return (
     <View
       style={{
-        height: 250,
-        width: 220,
+        height: height,
+        width: width,
         backgroundColor: 'white',
         flex: 1,
         alignItems: 'center',
         borderRadius: 30,
         elevation: 5,
-        marginLeft: 10,
-        marginRight: 10,
+        marginHorizontal: 10,
       }}>
       <View
         style={{

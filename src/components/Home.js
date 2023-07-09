@@ -9,8 +9,10 @@ import {
 } from 'react-native';
 import React from 'react';
 import CategoryTabs from './CategoryTabs';
+import {useNavigation} from '@react-navigation/native';
 
 const Home = () => {
+  const navigation = useNavigation();
   return (
     <>
       <View
@@ -44,7 +46,9 @@ const Home = () => {
             }}>{`Delicious\nfood for you`}</Text>
         </View>
         <TouchableOpacity
-          onPress={() => {}}
+          onPress={() => {
+            navigation.navigate('search');
+          }}
           style={{
             flexDirection: 'row',
             marginTop: 30,
@@ -60,11 +64,11 @@ const Home = () => {
               height: 16,
               width: 16,
               resizeMode: 'contain',
-              tintColor: 'grey',
+              tintColor: '#000',
               marginLeft: 20,
             }}
           />
-          <Text style={{marginLeft: 10}}>Search</Text>
+          <Text style={{marginLeft: 10, color: '#000'}}>Search</Text>
         </TouchableOpacity>
       </View>
       <View style={{flex: 2, marginHorizontal: 15}}>
